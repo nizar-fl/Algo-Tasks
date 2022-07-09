@@ -1,0 +1,28 @@
+ALGORITHM count
+VAR
+    sentence: STRING[]:= "Hello World.";    
+    wordCount: INTEGER:= 1;
+    voyelsCount: INTEGER:= 0;
+
+
+
+BEGIN
+
+    
+    FOR i FROM 0 TO sentence.length-1 STEP step  DO
+        WHILE (sentence[i] <> "." ) DO
+            IF sentence[i] IN ["a", "e", "i","o", "u"] THEN 
+                voyelsCount := voyelsCount + 1;
+            END;
+            IF (sentence[i] = " ") THEN
+                wordCount := wordCount + 1;
+            END;
+            
+        END_WHILE
+        
+
+    END_FOR
+    Write("voyels Count :" + voyelsCount);
+    Write("words Count :" + wordCount);
+END
+

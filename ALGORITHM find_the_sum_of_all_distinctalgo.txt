@@ -1,0 +1,23 @@
+ALGORITHM find_the_sum_of_all_distinct
+
+VAR
+    tab1,tab2 : ARRAY_OF INTEGER[lenght]; 
+    i : INTEGER;
+    sum:= 0;
+
+BEGIN 
+    Write("Give the first table of numbers : ");
+    read(tab1); 
+    Write("Give the second table of numbers : ");
+    read(tab2); 
+
+
+
+    FOR i := 0 TO tab2.length - 1 DO 
+       FOR j := 0 TO tab1.length - 1 DO 
+           IF tab1[j] = tab2[i] THEN 
+               sum := sum + tab1[j]; 
+            END;
+        END_FOR
+    END_FOR;
+END;    
